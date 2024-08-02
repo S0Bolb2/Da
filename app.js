@@ -6,51 +6,67 @@ tg.MainButton.textColor = '#FFFFFF';
 tg.MainButton.color = '#2cab37';
 
 let item = "";
-let clickCount = 0; // Добавляем переменную для подсчета кликов
 
 let btn1 = document.getElementById("btn1");
 let btn2 = document.getElementById("btn2");
 let btn3 = document.getElementById("btn3");
 
+// Initialize click counters
+let btn1Clicks = 0;
+let btn2Clicks = 0;
+let btn3Clicks = 0;
+
+// Display click counts
+let clicksDisplay = document.createElement("p");
+usercard.appendChild(clicksDisplay);
+
 btn1.addEventListener("click", function(){
-  clickCount++; // Увеличиваем счетчик при каждом клике
-  if (tg.MainButton.isVisible) {
-    tg.MainButton.hide();
-  }
-  else {
-    tg.MainButton.setText(Вы выбралиBitcoin! (Клик: ${clickCount})); // Выводим количество кликов в тексте кнопки
-    item = "1";
-    tg.MainButton.show();
-  }
+    btn1Clicks++;
+    updateClickCounts();
+ if (tg.MainButton.isVisible) {
+  tg.MainButton.hide();
+ }
+ else {
+  tg.MainButton.setText(f"Вы выбрали Bitcoin!");
+  item = "1";
+  tg.MainButton.show();
+ }
 });
 
 btn2.addEventListener("click", function(){
-  clickCount++;
-  if (tg.MainButton.isVisible) {
-    tg.MainButton.hide();
-  }
-  else {
-    tg.MainButton.setText(Вы выбралиEthereum! (Клик: ${clickCount}));
-    item = "2";
-    tg.MainButton.show();
-  }
+    btn2Clicks++;
+    updateClickCounts();
+ if (tg.MainButton.isVisible) {
+  tg.MainButton.hide();
+ }
+ else {
+  tg.MainButton.setText("Вы выбрали Ethereum!" + btn2Clicks);
+  item = "2";
+  tg.MainButton.show();
+ }
 });
 
 btn3.addEventListener("click", function(){
-  clickCount++;
-  if (tg.MainButton.isVisible) {
-    tg.MainButton.hide();
-  }
-  else {
-    tg.MainButton.setText(Вы выбралиTether! (Клик: ${clickCount}));
-    item = "3";
-    tg.MainButton.show();
-  }
+    btn3Clicks++;
+    updateClickCounts();
+ if (tg.MainButton.isVisible) {
+  tg.MainButton.hide();
+ }
+ else {
+  tg.MainButton.setText("Вы выбрали Tether!");
+  item = "3";
+  tg.MainButton.show();
+ }
 });
+
+// Function to update click counts display
+function updateClickCounts() {
+    clicksDisplay.innerText = Bitcoin: ${btn1Clicks}, Ethereum: ${btn2Clicks}, Tether: ${btn3Clicks};
+}
 
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
-  tg.sendData(item);
+ tg.sendData(item);
 });
 
 
