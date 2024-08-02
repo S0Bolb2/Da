@@ -18,7 +18,7 @@ btn1.addEventListener("click", function(){
     tg.MainButton.hide();
   }
   else {
-    tg.MainButton.setText(Вы выбрали Bitcoin! (Клик: ${clickCount})); // Выводим количество кликов в тексте кнопки
+    tg.MainButton.setText(Вы выбралиBitcoin! (Клик: ${clickCount})); // Выводим количество кликов в тексте кнопки
     item = "1";
     tg.MainButton.show();
   }
@@ -30,7 +30,7 @@ btn2.addEventListener("click", function(){
     tg.MainButton.hide();
   }
   else {
-    tg.MainButton.setText(Вы выбрали Ethereum! (Клик: ${clickCount}));
+    tg.MainButton.setText(Вы выбралиEthereum! (Клик: ${clickCount}));
     item = "2";
     tg.MainButton.show();
   }
@@ -42,7 +42,7 @@ btn3.addEventListener("click", function(){
     tg.MainButton.hide();
   }
   else {
-    tg.MainButton.setText(Вы выбрали Tether! (Клик: ${clickCount}));
+    tg.MainButton.setText(Вы выбралиTether! (Клик: ${clickCount}));
     item = "3";
     tg.MainButton.show();
   }
