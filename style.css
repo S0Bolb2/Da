@@ -26,7 +26,7 @@ body {
 }
 
 .btn {
-	display: inline-block;
+    display: inline-block;
 	padding: 10px 20px;
 	border: none;
 	background: rgb(248, 168, 24);
@@ -39,13 +39,30 @@ body {
 }
 
 .btn.minus {
-     background-color: red;
-     /* Добавьте свой стиль для кнопки "минус" */
+    display: inline-block;
+    padding: 10px 20px;
+	border: none;
+    background-color: red;
+	border-radius: 10px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 350;
+
+	transition: background .2s linear;
    }
 
 .btn.plus {
-     background-color: green;
-     /* Добавьте свой стиль для кнопки "плюс" */
+    display: inline-block;
+    padding: 10px 20px;
+	border: none;
+    background-color: green;
+	border-radius: 10px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 350;
+
+	transition: background .2s linear;
+   }
    }
 
 
