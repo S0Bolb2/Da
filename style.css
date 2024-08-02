@@ -8,6 +8,7 @@ body {
 
 .container {
 	max-width: 390px;
+	justify-content: center;
 }
 
 .inner {
@@ -36,6 +37,18 @@ body {
 
 	transition: background .2s linear;
 }
+
+.btn.minus {
+     background-color: red;
+     /* Добавьте свой стиль для кнопки "минус" */
+   }
+
+.btn.plus {
+     background-color: green;
+     /* Добавьте свой стиль для кнопки "плюс" */
+   }
+
+
 
 .btn:hover {
 	background: lightgreen;
